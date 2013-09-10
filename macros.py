@@ -1,9 +1,7 @@
 #TODO - use the JSON-LD way of doing this
 types = {
 "@facility" : "http://vivoweb.org/ontology/core#CoreLaboratory",
-"@experiment" : "http://purl.org/some/experiment"
-
-
+"@experiment" : "http://www.w3.org/TR/2013/REC-prov-o-20130430/#Activity"
 }
 
 page = {
@@ -54,7 +52,7 @@ def hook_preconvert_semantics():
 def hook_postconvert_semantics():
     for p in pages:
     	if p.typeOf <> None:
-       		p.html = "\n\n<section resource='%s' typeof='%s'>\n\n%s\n\n</section>\n\n" % (p.url, types[p.typeOf], p.html)
+       		p.html = "\n\n<section resource='http://hie.uws.edu.au/research-context/%s' typeof='%s'>\n\n%s\n\n</section>\n\n" % (p.url, types[p.typeOf], p.html)
     for p in pages:
 	ptype = typeOf(p)
 	if ptype == "@facility":

@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Research Context Experiment EucFace</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="poole" />
+    <style type="text/css">
+        body {
+            font-family: sans;
+            width: 800px;
+            margin: 1em auto;
+            color: #2e3436;
+        }
+        div#box {
+        }
+        div#header, div#menu, div#content, div#footer {
+            padding: 1em;
+        }
+        div#menu {
+            background-color: #eeeeec;
+            padding: 0.6em 0 0.6em 0;
+        }
+        #menu span {
+            font-weight: bold;
+            padding: 0.6em;
+        }
+        #menu span.current {
+            background-color: #ffffff;
+            border: 1px solid #eeeeec;
+        }
+        #menu a {
+            color: #000000;
+            text-decoration: none;
+        }
+        div#footer {
+            color: gray;
+            text-align: center;
+            font-size: small;
+        }
+        div#footer a {
+            color: gray;
+            text-decoration: none;
+        }
+        pre {
+            border: dotted black 1px;
+            background: #eeeeec;
+            font-size: small;
+            padding: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+    <div id="header">
+         <h1>Research Context Experiment</h1>
+         <h2>EucFace</h2>
+    </div>
+    <div id="menu">
+    <span class=""><a href="/index.html">home</a></span>
+<span class=""><a href="/facilities.html">Facilities</a></span>
+    </div>
+    <div id="content">
+
+<section resource='http://hie.uws.edu.au/research-context/facilities/eucface.html' typeof='http://vivoweb.org/ontology/core#CoreLaboratory'>
+
+<h1 property="dc:title">Eucalyptus woodland free-air CO2 enrichment (EucFACE) facility</h1>
+
+<table>
+<tr><th>Code</th><td>FACE</td></tr>
+<tr><th>Location</th><td><span property="http://www.w3.org/2003/01/geo/wgs84_pos#lat" content="-33.6132"-33.6132</span>(-33.6132</span>,<span property="http://www.w3.org/2003/01/geo/wgs84_pos#long" content="150.72446">150.72446</span>)</td></tr>
+
+</table>
+
+<h1>Data organisation overview</h1>
+<p>Each of the six 'rings' within eucFACE collects data streaming off automated logger stations (meteorological data, radiative data etc) being generated on different time frequencies. This data may be uploaded into HIEv on a ring per ring basis or in certain scenarios as a single site-wide dataset (see below). In addition to automated facility data, scientific 'projects' operating within eucFACE also collect data on a per project basis. Data relating to that project is marked as so within HIEv. The file naming convention for eucFACE captures this distinction.</p>
+<h1>File Naming Convention</h1>
+<p>Convention: FACE_&lt;PROJECT&gt;<em>&lt;RING&gt;</em>&lt;VARIABLE COLLECTION CODE&gt;<em>&lt;DATA PROCESSING&gt;</em>&lt;DATE or DATERANGE&gt;[_&lt;VERSION&gt;].&lt;filetype&gt;</p>
+<p>(all terms in the filename should be upper case apart from the file ending which should be lower case)</p>
+<p>FACE: Official HIE facility code to represent data sourced from the eucFACE facility (all data from the eucFACE facility will be prefixed by use of the code 'FACE'). See all official HIE facility codes here.
+&lt;PROJECT&gt;: Which of the official EucFACE projects this data file is associated with. The project code should be used in the filename (capitalized P followed by a 4 digit project number, e.g. P0003, P0012, etc). Details about different projects taking part at eucFACE can be found here. In the event that the data is from automated facility, 'AUTO' can be used for the project code
+&lt;RING&gt;: Which ring(s) data has been sourced from. This can include data sourced from a single EucFACE ring, from all rings, or from a subset of rings. It also allows the file to refer to FACE data collected on a non-ring site. Rules on how to label each are in the Ring section below.
+&lt;VARIABLE COLLECTION CODE&gt;: A collection code that represents a particular grouping of variables contained within a file. A list of variables contained within different variable collection codes can be found below.
+&lt;DATE or DATERANGE&gt;: The date range which a dataset covers (for automated timeseries data for example) or the single date on which a sample, for example, was taken. Note that dates are in the YYYYMMDD format (with a hyphen used to split the start and end date of a date range). Note that in the case of facility data a 'data chunking' date may be used marking on which date the 'chunking' of this file ended/will end (see explanation).
+&lt;DATA PROCESSING&gt;: The level of post-processing operated on the data. The definitions of the different levels of post-processing can be found below.
+&lt;VERSION&gt;: An optional version number of the form _Vx. This can be utilized when a new version of a file already existing within HIEv has been updated/corrected (maintaining the same data processing level).
+&lt;filetype&gt;: The format of the data file. Further information about different file types can be found on the data formats page, found here.</p>
+<h1>Examples:</h1>
+<p>FACE_AUTO_R3_FLUX_R_20130630.dat - Automated facility data from Ring 3 within the EUCFace facility in the 'chunking' period up to 30th June 2013 and covering variables included in the 'FLUX' category of variables.
+FACE_P0005_R346_RAD_L1_20130527.dat - 'RAD' data for the 27th May 2013, created as part of project P0005 within the eucFACE facility, and sourced from rings 3, 4 and 6. The data has been subjected to level one cleaning and processing.
+FACE_P0005_R346_RAD_L1_20130527_V2.dat - Corrected version of the above file (due to an error in the cleaning script).</p>
+<h1>Ring</h1>
+<p>'Ring' specifies which of the 6 EucFACE rings have been a source location for the current data file. Data sourced from...
+a single ring will use Rx (where x is a single digit from 1 to 6), e.g. R1 for ring 1, R2 for ring 2, etc.
+all rings will use RA. 
+a subset of rings will use R followed by an ordered list of rings, up to a maximum of 5 rings (when all 6 rings are used 'RA' should be used). So for example:
+R12 contains data sourced from rings 1 and 2.
+R346 contains data sourced from rings 3, 4 and 6.
+R23456 contains data sourced from all rings apart from ring 1.
+a EucFACE sampling location outside of the 6 rings will use R0 (R followed by a zero). A description  of the actual sampling location should be added in the metadata in this scenario.</p>
+<h1>Variable Collection Codes</h1>
+<p>Variable collection codes are used to group together a collection of linked variables. Further information about each collection code, and how to request the addition of a new collection code, can be found on the EucFACE collections code page.</p>
+<p>Data Processing Codes</p>
+<p>The meanings of the different data processing codes used in eucFACE are as follows: </p>
+<p>R   -  Raw Data.               Data that has been directly extracted from an instrument and that has not been subjected to any data cleaning or post-processing
+L1 -   Level One Data.      Data that has been cleaned and processed, but in a cursory manner. Some erroneous data may be included.
+L2 -   Level Two Data.      Data that has been rigorously cleaned, processed, and checked for quality control. 
+L3 -   Level Three Data.    Archive of published datasets. </p>
+<p>For additonal help in uploading eucFACE-related data into HIEv, please see the guidance page
+Facility PC data</p>
+<p>Initial raw data loaded into HIEv may differ in name from that stored at the facility. The naming convention used by technicians has particular meaning that helps in the management of data at the facility technical level. This naming convention however does not lend itself well to data discovery/management from a general data user perspective. Therefore instead of attempting to force both cases to use the same naming convention, filenames may be converted to the HIEv naming convention before ingestion. A mapping of the original 'technical' name to the HIEv name is kept here, and should the need arise, will allow HIEv data to be traced back to the facility PC. </p>
+<h1>Facility Status History</h1>
+<p>Details of the operating status of the eucFACE facility including shutdown periods etc can be found here.</p>
+
+</section>
+
+<section><h1>Experiments associated with facility: Eucalyptus woodland free-air CO2 enrichment (EucFACE) facility</h1></section></div>
+    </div>
+    <div id="footer">
+        Built with <a href="http://bitbucket.org/obensonne/poole">Poole</a>
+        &middot;
+        Licensed as <a href="http://creativecommons.org/licenses/by-sa/3.0">CC-SA</a>
+        &middot;
+        <a href="http://validator.w3.org/check?uri=referer">Validate me</a>
+    </div>
+</body>
+</html>

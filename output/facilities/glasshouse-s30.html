@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>poole - Glasshouse S30</title>
+    <title>Research Context Experiment Glasshouse S30</title>
     <meta name="description" content="Glasshouse in the S-precinct of the University of Western Sydney, Hawkesbury Campus, containing eight naturally lit and temperature-controlled compartments (3 x 5 x 3.5m, width x length x height). This glasshouse is widely used for short-term projects, often with a duration of 2-3 months. Air temperature is measured and controlled by an automated system at user-defined targets (+/- 4 degrees C) within each compartment. The concentration of atmospheric carbon dioxide is controlled within each compartment using a system of infrared gas analyzers and carbon dioxide injectors. Supplementary lighting will be installed in 2013." />
     <meta name="keywords" content="poole" />
     <style type="text/css">
@@ -53,7 +53,7 @@
 <body>
     <div id="box">
     <div id="header">
-         <h1>a poole site</h1>
+         <h1>Research Context Experiment</h1>
          <h2>Glasshouse S30</h2>
     </div>
     <div id="menu">
@@ -62,16 +62,22 @@
     </div>
     <div id="content">
 
-<section resource='facilities/glasshouse-s30.html' typeof='http://vivoweb.org/ontology/core#CoreLaboratory'>
+<section resource='http://hie.uws.edu.au/research-context/facilities/glasshouse-s30.html' typeof='http://vivoweb.org/ontology/core#CoreLaboratory'>
 
 <h1 property="dc:title">Glasshouse facility at UWS Hawkesbury building S30</h1>
 
 <p>Glasshouse in the S-precinct of the University of Western Sydney, Hawkesbury Campus, containing eight naturally lit and temperature-controlled compartments (3 x 5 x 3.5m, width x length x height). This glasshouse is widely used for short-term projects, often with a duration of 2-3 months. Air temperature is measured and controlled by an automated system at user-defined targets (+/- 4 degrees C) within each compartment. The concentration of atmospheric carbon dioxide is controlled within each compartment using a system of infrared gas analyzers and carbon dioxide injectors. Supplementary lighting will be installed in 2013.
 <table>
 <tr><th>Code</th><td>GHS30</td></tr>
-<tr><th>Location</th><td><span property="http://www.w3.org/2003/01/geo/wgs84_pos#lat" content="150.7465"150.7465</span>(150.7465</span>,<span property="http://www.w3.org/2003/01/geo/wgs84_pos#long" content="-33.6112">-33.6112</span>)</td></tr></p>
+<tr><th>Location</th><td><span property="http://www.w3.org/2003/01/geo/wgs84_pos#lat" content="-33.6112"-33.6112</span>(-33.6112</span>,<span property="http://www.w3.org/2003/01/geo/wgs84_pos#long" content="150.7465">150.7465</span>)</td></tr></p>
 </table>
 
+<p>Contact: Renee Smith (technician, R.Smith@uws.edu.au), John Drake (Post-doc, je.drake@uws.edu.au), Mike Aspinwall (Post-doc, m.aspinwall@uws.edu.au).</p>
+<h1>References:</h1>
+<p>Smith, R. A., J. D. Lewis, O. Ghannoum, and D. T. Tissue. 2012. Leaf structural responses to pre-industrial, current and elevated atmospheric CO2 and temperature affect leaf function in Eucalyptus sideroxylon. Functional Plant Biology 39:285-296.</p>
+<p>Ghannoum, O., N. G. Phillips, J. P. Conroy, R. A. Smith, R. D. Attard, R. Woodfield, B. A. Logan, J. D. Lewis, and D. T. Tissue. 2010. Exposure to preindustrial, current and future atmospheric CO2 and temperature differentially affects growth and photosynthesis in Eucalyptus. Global Change Biology 16:303-319.</p>
+<h1>Data organisation overview</h1>
+<p>There have been a large number of relatively short-duration experiments in the Glasshouse S30 facility, often with multiple nested projects within each experiment.  The file naming convention captures this hierarchy.</p>
 <h1>File Naming Convention</h1>
 <p>Convention: GHS30_&lt;EXPERIMENT&gt;<em>&lt;PROJECT&gt;</em>&lt;VARIABLE COLLECTION CODE&gt;<em>&lt;DATA PROCESSING&gt;</em>&lt;DATE or DATERANGE&gt;[_&lt;VERSION&gt;].&lt;filetype&gt;</p>
 <p>(all terms in the filename should be upper case apart from the file ending which should be lower case)</p>
@@ -83,12 +89,22 @@
 <p>&lt;DATE or DATERANGE&gt;: The date range which a dataset covers (for automated timeseries data for example) or the single date on which a sample, for example, was taken. Note that dates are in the YYYYMMDD format (with a hyphen used to split the start and end date of a date range).</p>
 <p>&lt;VERSION&gt;: An optional version number of the form _Vx. This can be utilised when a new version of a file already existing within HIEv has been updated/corrected (maintaining the same same data processing level).</p>
 <p>&lt;filetype&gt;: The format of the data file. Further information about different file types can be found on the data formats page, found here.</p>
+<h1>Variable Collection Codes</h1>
+<p>Variable collection codes can vary in meaning across different GH30 experiments and projects. The full breakdown of variable collection codes and what they represent can be found here.</p>
+<p>Data Processing Codes</p>
+<p>The meanings of the different data processing codes used in Glasshouse S30 filenames are as follows: </p>
+<p>R   -  Raw Data.               Data that has been directly extracted from an instrument and that has not been subjected to any data cleaning or post-processing
+L1 -   Level One Data.      Data that has been cleaned and processed, but in a cursory manner. Some erroneous data may be included.
+L2 -   Level Two Data.      Data that has been rigorously cleaned, processed, and checked for quality control. 
+L3 -   Level Three Data.    Archive of published datasets. </p>
+<p>Facility Status History</p>
+<p>Details of the operating status of the Glasshouse S30 including shutdown periods etc can be found here.</p>
 
 </section>
 
 <section><h1>Experiments associated with facility: Glasshouse facility at UWS Hawkesbury building S30</h1>
 
-<section resource='experiments/pcs.html' typeof='http://purl.org/some/experiment'>
+<section resource='http://hie.uws.edu.au/research-context/experiments/pcs.html' typeof='http://purl.org/some/experiment'>
 
 <p>The biogeography project ended on 11 Jan 2013. The drought and heatwave project ended on 28 Mar 2013.</p>
 
